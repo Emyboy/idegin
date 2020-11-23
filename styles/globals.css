@@ -2,10 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
-
+/* 
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +13,24 @@ a {
 
 * {
   box-sizing: border-box;
+} */
+
+.link {
+  cursor:pointer !important;
 }
+.link:hover {
+  cursor:pointer !important;
+  background-color: black
+}
+
+@import "../assets/vendor/unicons-2.0.1/css/unicons.css";
+@import "../assets/css/vertical-responsive-menu.min.css";
+@import "../assets/css/responsive.css";
+@import "../assets/css/night-mode.css";
+
+@import "../assets/vendor/fontawesome-free/css/all.min.css";
+@import "../assets/vendor/OwlCarousel/assets/owl.carousel.css";
+@import "../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css";
+@import "../assets/vendor/bootstrap/css/bootstrap.min.css";
+@import "../assets/vendor/semantic/semantic.min.css";
+@import "../assets/css/style.css";

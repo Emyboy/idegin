@@ -1,65 +1,91 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import CourseCard from '../components/CourseCard/CourseCard';
+import { withTheme } from '../context/AppContext'
 
-export default function Home() {
+
+export default withTheme(props => {
+  // console.log('home props ---', props);
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        {/* <title>Create Next App</title> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div className='row'>
+        <div className='col-xl-9 col-lg-8'>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          <div className='section3125 mt-50 mt-0'>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+            <h4 class="item_title">Featured Courses</h4>
+            <a href="#" class="see150">See all</a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            <div className='la5lo1'>
+              <div className='owl-carousel featured_courses owl-theme owl-loaded owl-drag'>
+                <div className='owl-stage-outer row' style={{ justifyContent: 'center' }}>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                  <CourseCard />
+                  <CourseCard />
+                  <CourseCard />
+                  <CourseCard />
+                  <CourseCard />
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+
+        <div className='col-xl-3 col-lg-4'>
+          <div className="right_side">
+
+
+            <div class="fcrse_2 mb-30">
+              <div class="tutor_img">
+                <a href="my_instructor_profile_view.html"><img src="https://photos.angel.co/users/10624246-large?1581366252" alt="" /></a>												
+								</div>
+                <div class="tutor_content_dt">
+                  <div class="tutor150">
+                    <a href="my_instructor_profile_view.html" class="tutor_name">Chukwuemeka Ifeora</a>
+                    <div class="mef78" title="Verify">
+                      <i class="uil uil-check-circle"></i>
+                    </div>
+                  </div>
+                  <div class="tutor_cate">Web Developer, and Teacher</div>
+                  <ul class="tutor_social_links">
+                    <li><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="tw"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="ln"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#" class="yu"><i class="fab fa-youtube"></i></a></li>
+                  </ul>
+                  {/* <div class="tut1250">
+                    <span class="vdt15">615K Students</span>
+                    <span class="vdt15">12 Courses</span>
+                  </div> */}
+                  {/* <a href="my_instructor_profile_view.html" class="prfle12link">Go To Profile</a> */}
+                </div>
+              </div>
+
+
+
+            <div className="strttech120">
+              <h4>Become an Instructor</h4>
+              <p>Top instructors from around the world teach millions of students on Cursus. We provide the tools and skills to teach what you love.</p>
+              <button className="Get_btn" onclick="window.location.href = '#';">Start Teaching</button>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+      </div>
     </div>
   )
-}
+});
