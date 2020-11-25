@@ -5,24 +5,37 @@ import { useRouter } from 'next/router'
 
 export default withTheme(props => {
     const { context } = props;
-    const router = useRouter()
+    const router = useRouter();
+
+    const handleClick = (route) => {
+        router.push(route);
+        context.toggleSideNav()
+    }
+
     return (
         <nav className={context.showNav ? "vertical_nav" : "vertical_nav vertical_nav__minify vertical_nav vertical_nav__opened"}>
             <div className="" id="">
                 <div className="left_section">
                     <ul>
                         <li className="menu--item">
-                            <a href="#" onClick={() => router.push('/')}  className="menu--link active" title="Home">
+                            <a href="#" onClick={() => handleClick('/')} className={`menu--link ${context.activePage === 'home' ? " active" : null}`} title="Home">
                                 <i className="uil uil-home-alt menu--icon"></i>
                                 <span className="menu--label">Home</span>
                             </a>
                         </li>
                         <li className="menu--item">
+                            <a href="#" onClick={() => handleClick('/dashboard')} className={`menu--link ${context.activePage === 'dashboard' ? " active" : null}`} title="Dashboard">
+                                {/* <i className="uil uil-dashboard-alt menu--icon"></i> */}
+                                <i className="uil fa fa-tachometer-alt menu--icon mt-2"></i>
+                                <span className="menu--label">Dashboard</span>
+                            </a>
+                        </li>
+                        {/* <li className="menu--item">
                             <a href="live_streams.html" className="menu--link" title="Live Streams">
                                 <i className="uil uil-user menu--icon"></i>
                                 <span className="menu--label">Login</span>
                             </a>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
 

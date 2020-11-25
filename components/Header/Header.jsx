@@ -53,17 +53,21 @@ export default withTheme(props => {
 
             <div className="header_right">
                 <ul>
-                    <li>
-                        <a href="create_new_course.html" className="upload_btn" title="Create New Course">Create New Course</a>
-                    </li>
+                    {
+                        context.user ?
+                            <li class="ui dropdown">
+                                <a href="#" onClick={() => router.push(`/user/${context.user.displayName}`)} className='option_links'>
+                                    <img style={{ height: '40px', borderRadius: '100%' }} src={context.photoURL} alt="" /></a>
+                            </li> :
+                            <li>
+                                <a href="#" onClick={context.login} className="upload_btn" title="Create New Course">Login / Signup</a>
+                            </li>
+                    }
 
 
-                    <li class="ui dropdown">
-                        <a href="#" onClick={() => router.push('/user/emy')} className='option_links'><img style={{ height: '40px', borderRadius: '100%' }} src="https://photos.angel.co/users/10624246-large?1581366252" alt="" /></a>
-                    </li>
 
 
-                    
+
 
 
 

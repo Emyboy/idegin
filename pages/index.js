@@ -1,3 +1,4 @@
+import React, { useEffect} from 'react'
 import Head from 'next/head'
 import CourseCard from '../components/CourseCard/CourseCard';
 import { withTheme } from '../context/AppContext'
@@ -5,7 +6,14 @@ import { withTheme } from '../context/AppContext'
 
 export default withTheme(props => {
   // console.log('home props ---', props);
+  const { context } = props;
 
+
+  useEffect(() => {
+    context.setContextState({
+      activePage: 'home'
+    })
+  }, [context.activePage])
   return (
     <div>
       <Head>

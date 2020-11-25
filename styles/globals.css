@@ -23,6 +23,12 @@ a {
   background-color: black
 }
 
+/* @import '../assets/dashboard_css/style.css'; */
+/* @import '../assets/dashboard_css/datepicker.min.css'; */
+@import '../assets/dashboard_css/instructor-dashboard.css';
+/* @import '../assets/dashboard_css/instructor-responsive.css'; */
+
+
 @import "../assets/vendor/unicons-2.0.1/css/unicons.css";
 @import "../assets/css/vertical-responsive-menu.min.css";
 @import "../assets/css/responsive.css";
